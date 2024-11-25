@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cancelar Viaje</ion-title> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="titulo">
+    <h1>ANULA</h1>
+    <h2>TU VIAJE</h2>
+  </div>
+  <div class='container'>
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+          <ion-avatar slot="start" class="avatar-circle">
+            <p>{{ viaje.id ? viaje.id.slice(0, 2) : '' }}</p>
+          </ion-avatar>
+        <ion-label>
+          <h1>Destino: {{ viaje.destino }}</h1>
+          <p>Capacidad: {{ viaje.capacidad }} personas</p>
+          <p>Precio: {{ viaje.precio | number:'1.0-0' }} CLP</p>
+          <p>Lugar de Encuentro: {{ viaje.encuentro }}</p>  
+          <div class="hora-container">
+            <span class="hora">Hora: {{ viaje.hora }}</span>
+          </div>
+        </ion-label>
+        <ion-button color="danger" (click)="eliminarViaje(viaje.id)">Anular</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

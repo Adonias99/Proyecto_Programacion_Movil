@@ -1,0 +1,127 @@
+.titulo{
+  margin-top: 20%;
+}
+.titulo h1{
+
+  color: #edb232;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+.titulo h2{
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}   
+.formulario {
+  background-color: #083d85; 
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  margin-bottom: 5px;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column; // Alinea los elementos en columna
+  justify-content: center; // Centra verticalmente
+  align-items: center; // Centra horizontalmente
+  padding: 20px; // Agrega un poco de padding para evitar que los elementos toquen los bordes
+}
+
+ion-input {
+  --color: #fff; // Mantiene el color del texto
+}
+
+p {
+  margin-left: 19px;
+  font-size: 1rem; // Tamaño del texto
+  margin-bottom: 10px; // Espacio entre el texto y el primer elemento
+}
+
+  
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+   
+    ion-toolbar {
+      --background: #083d85; 
+      --color:#083d85; 
+    }
+    
+   
+    ion-content {
+      --background: #083d85; 
+    }
+
+  
+    
+    ion-toolbar {
+      --background: #083d85; 
+      --color: #fff; 
+    }
+    ion-toolbar ion-buttons{
+      width: 7px;
+    }
+    ion-title {
+      text-align: center;
+      flex-direction: column; // Alinea los elementos en columna
+      justify-content: center;
+    }
+    ion-button {
+      --background: #edb232; 
+      --color: white;
+      width: 250px;
+      height: 40px;
+      text-align: center;
+      border-radius: 900px;
+      margin-top: 12px;
+    }
+  
+    ion-item {
+      --background: #083d85;
+      --border-color: transparent;
+    }
+
+    ion-input{
+      --color: #fff;
+    }
+    .g-recaptcha {
+      display: block;
+    }
+    .nombre-usuario-item {
+      margin-top: 20px;
+    }
+    
+    .correo-item {
+      margin: 8px 0; // Espacio entre el correo y el siguiente item
+    }
+    
+    .contrasenna-item {
+      margin: 6px 0; // Espacio entre la contraseña y el siguiente item
+    }
+    
+    .confirmacion-contrasenna-item {
+      margin: 8px 0; // Espacio entre la confirmación de contraseña y el siguiente item
+    }
+    
+    .nombre-apellido-item {
+      margin: 10px 0; // Espacio entre el nombre y apellido y el siguiente item
+    }

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mis Viajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="titulo">
+    <h1>MIS</h1>
+    <h2>VIAJES</h2>
+  </div>
+  <div class='container'>
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+        <ion-avatar slot="start" class="avatar-circle">
+          <p>{{ viaje.id ? viaje.id.slice(0, 2) : '' }}</p> <!-- Muestra el ID del viaje -->
+        </ion-avatar>
+        <ion-label>
+          <h1>Destino: {{ viaje.destino }}</h1>
+          <p>Capacidad: {{ viaje.capacidad }} personas</p>
+          <p>Precio: {{ viaje.precio }} CLP</p>
+          <p>Lugar de Encuentro: {{ viaje.encuentro }}</p>
+          <p>Estado: {{ viaje.usuariosPagantes?.includes(userId!) ? 'Pagado' : 'Pendiente' }}</p>
+          <div class="hora-container">
+            <span class="hora">Hora: {{ viaje.hora }}</span>
+          </div>
+        </ion-label>
+        <div class="botones-container">
+          <ion-button (click)="verRuta(viaje)">Ver Ruta</ion-button>
+          <ion-button (click)="irQR(viaje)">Ver QR</ion-button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

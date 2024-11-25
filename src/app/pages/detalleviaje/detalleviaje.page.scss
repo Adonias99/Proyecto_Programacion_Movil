@@ -1,0 +1,87 @@
+ion-toolbar {
+  --background: #083d85; 
+  --color: #fff; 
+  }
+  ion-toolbar ion-buttons{
+    width: 7px;
+  }
+  ion-title {
+      text-align: center;
+      flex-direction: column; // Alinea los elementos en columna
+      justify-content: center;
+    }
+    
+    ion-menu-button {
+      background-color: #4e74a7; /* Azul */
+      height: 55px;
+      width: 80px;
+      color: aliceblue;
+    }
+
+ion-content {
+  --background: #083d85; /* Azul oscuro */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+}
+
+.contenido img {
+  max-width: 100%; /* Hace que la imagen sea responsiva */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 20px; /* Espacio entre la imagen y el botón */
+}
+
+ion-button { 
+  --color: white;
+  width: 250px;
+  height: 55px;
+  text-align: center;
+  border-radius: 900px;
+  margin-top: 6px;
+}
+
+
+.titulo h1{
+  color: #edb232;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px;
+}
+.titulo h2{
+  color: aliceblue;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px;
+
+  margin-bottom: 14%;
+}
+
+.contenido img{
+  margin-bottom: 6%;
+}
+.titulo-precio {
+  margin-top: 10px;
+  font-size: 24px; /* Ajusta el tamaño según tus preferencias */
+  font-weight: bold; /* Para hacer el texto en negrita */
+  color: #fff; /* Cambia el color si es necesario */
+  margin-bottom: 8px; /* Espaciado debajo del título */
+}

@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-container">
+  <div class="qr-container">
+    <qr-code [value]="qr" size="300" errorCorrectionLevel="M"></qr-code>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Código QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Asegurate de presentarle el QR al chofer para verificar tu identidad.</p>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button expand="block" routerLink="/lista-viaje">Volver</ion-button>
+</ion-content>

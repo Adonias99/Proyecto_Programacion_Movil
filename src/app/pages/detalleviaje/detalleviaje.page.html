@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+      <ion-title>Pagar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles del Viaje</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item *ngFor="let viaje of viajes">
+        <ion-label>
+          <h2>Destino: {{ viaje.destino }}</h2>
+          <p> Precio: {{ viaje.precio | number:'1.0-0' }} CLP</p>
+          <p>Hora: {{viaje.hora}} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- Contenedor para los botones de PayPal -->
+    <div #paypal id="paypal-button-container"></div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Leer QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="camera-preview">
+  <div *ngIf="isScanning" class="camera-view">
+      <p>Escaneando... apunte la cámara hacia un código QR.</p>
+  </div>
+
+  <!-- Lista de códigos escaneados -->
+  <ion-list *ngIf="barcodes.length > 0">
+    <ion-item *ngFor="let barcode of barcodes">
+      <ion-label position="stacked">{{ barcode.format }}</ion-label>
+      <ion-input type="text" [value]="barcode.rawValue" readonly></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón de escaneo flotante -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="startScan()" [disabled]="!isSupported || isScanning">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- Mensaje cuando no hay códigos escaneados -->
+  <div *ngIf="barcodes.length === 0 && !isScanning" class="no-results">
+    <p>No se han escaneado códigos QR.</p>
+  </div>
+</ion-content>
+
+<style>
+  .camera-preview {
+    position: relative; /* Asegúrate de que el contenido de la cámara tenga posición relativa */
+    height: 100%; /* Ocupa todo el espacio disponible */
+  }
+
+  .camera-view {
+    position: absolute; /* Coloca la vista de la cámara por encima del contenido */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    background-color: rgba(0, 0, 0, 0.5); /* Un fondo semi-transparente */
+    color: white; /* Texto blanco para mayor contraste */
+  }
+
+  .no-results {
+    text-align: center;
+    margin-top: 50px;
+    color: gray;
+  }
+</style>

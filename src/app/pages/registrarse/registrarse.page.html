@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="titulo">
+      <h1>Tellevo</h1>
+      <h2>APP</h2>
+    </div>
+
+    <div class="formulario">
+      <form (ngSubmit)="registrar()">
+        <p>Ingresa tus datos para crear una cuenta:</p>
+        <ion-item class="nombre-usuario-item">
+          <ion-input [(ngModel)]="nuevo_Usuario.nombreUsuario" 
+                     name="nombreUsuario"  
+                     label="Nombre de Usuario" 
+                     label-placement="floating" 
+                     fill="outline" 
+                     placeholder="Ingrese su nombre de usuario">
+          </ion-input>
+        </ion-item>
+    
+        <ion-item class="correo-item">
+          <ion-input [(ngModel)]="nuevo_Usuario.correo" 
+                     name="correo"  
+                     label="Correo" 
+                     label-placement="floating" 
+                     fill="outline" 
+                     type="email" 
+                     placeholder="Ingrese su correo electrónico">
+          </ion-input>
+        </ion-item>
+    
+        <ion-item class="contrasenna-item">
+          <ion-input [(ngModel)]="nuevo_Usuario.contrasenna" 
+                     name="contrasenna"  
+                     label="Contraseña" 
+                     label-placement="floating" 
+                     fill="outline" 
+                     type="password"
+                     placeholder="Ingrese su contraseña">
+          </ion-input>
+        </ion-item>
+    
+        <ion-item class="confirmacion-contrasenna-item">
+          <ion-input [(ngModel)]="confirmacionContrasenna" 
+                     name="confirmacionContrasenna"  
+                     label="Confirmar Contraseña" 
+                     label-placement="floating" 
+                     fill="outline" 
+                     type="password"
+                     placeholder="Repita su contraseña">
+          </ion-input>
+        </ion-item>
+    
+        <ion-item class="nombre-apellido-item">
+          <ion-input [(ngModel)]="nuevo_Usuario.nombreApellido" 
+                     name="nombreApellido"  
+                     label="Nombre y Apellido" 
+                     label-placement="floating" 
+                     fill="outline" 
+                     placeholder="Ingrese su nombre y apellido">
+          </ion-input>
+        </ion-item>
+
+        <div id="recaptcha"></div>
+
+        <ion-item>
+          <ion-button expand="full" type="submit">Registrarse</ion-button>
+        </ion-item>
+      </form>
+    </div>
+  </div>
+</ion-content>

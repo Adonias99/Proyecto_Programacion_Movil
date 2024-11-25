@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buscar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="titulo">
+    <h1>BUSCAR</h1>
+    <h2>VIAJES</h2>
+  </div>
+
+  <div class="search-container">
+    <ion-searchbar 
+      [(ngModel)]="searchTerm" 
+      (ionInput)="filtrarViajes()" 
+      show-clear-button="focus" 
+      placeholder="Buscar por destino">
+    </ion-searchbar>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let viaje of filteredViajes">
+      <ion-label>
+        <div class="destino-container">
+          <h2 class="titulo-destino">Destino: {{ viaje.destino }}</h2>
+        </div>
+        <p class="capacidad">Disponible: {{ viaje.capacidad }} personas</p>
+        <p class="precio">Precio: {{ viaje.precio | number:'1.0-0' }} CLP</p>
+        <p class="encuentro">Lugar de Encuentro: {{ viaje.encuentro }}</p>
+        <div class="hora-container">
+          <span class="hora">Hora: {{ viaje.hora }}</span>
+        </div>
+      </ion-label>
+      <ion-button class="aceptar-viaje" (click)="detalleviaje(viaje)">Aceptar Viaje</ion-button>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

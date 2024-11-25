@@ -1,0 +1,66 @@
+ion-content {
+    display: flex;              /* Utiliza flexbox para el contenedor */
+    flex-direction: column;     /* Apila los elementos en columna */
+    justify-content: center;    /* Centra verticalmente el contenido */
+    align-items: center;        /* Centra horizontalmente el contenido */
+    height: 100%;               /* Asegúrate de que el contenido ocupe el 100% de la altura */
+}
+
+ion-button {
+    margin-top: 20px;     
+    display: flex;              /* Utiliza flexbox para el contenedor */
+    flex-direction: column;     /* Apila los elementos en columna */
+    justify-content: center;    /* Centra verticalmente el contenido */
+    align-items: center;      
+    color: #fff;      /* Espacio entre el botón y otros elementos */
+}
+  
+ion-card {
+    margin: 20px 0; /* Margen vertical para separar el card del resto */
+  }
+
+  ion-card-content {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  
+  ion-input {
+    width: 80%; /* Ajusta el ancho del input */
+  }
+  
+ion-toolbar ion-title {
+    margin-left: -3containte0px;
+    text-align: center;
+  }
+  
+ion-toolbar ion-buttons{
+    width: 7px;
+  }
+ion-content {
+    --background: #083d85; /* Color de fondo */
+    display: flex;
+    flex-direction: column;  /* Apila elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    text-align: center;      /* Centra texto dentro de los elementos */
+    height: 100%;            /* Asegura que ocupe toda la altura */
+  }
+  
+  .qr-container {
+    display: flex;           /* Utiliza flexbox para el contenedor del QR */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 20px 0;         /* Margen superior e inferior */
+  }
+  
+  ion-input {
+    margin-top: 20px;       /* Espacio entre el código QR y el input */
+    width: 80%;             /* Ajusta el ancho según sea necesario */
+  }
+  
+
+  ion-toolbar {
+    --background: #4e74a7; 
+    --color: #fff; 
+  }
+  

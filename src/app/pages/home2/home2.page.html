@@ -1,0 +1,71 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <div class="menu">
+        <ion-title>Menu</ion-title>
+        <ion-list lines="none">
+          <ion-item (click)="listaviaje()" detail="false">
+            VER QR
+          </ion-item>
+        </ion-list>
+        <ion-button (click)="cerrar_sesion()">Cerrar Sesion</ion-button>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+</ion-menu>
+
+
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <div class="titulo">
+        <ion-title>Bienvenido<ion-text>{{usuario}}</ion-text></ion-title>
+      </div>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding" id="main-content">
+    <div class="titulo2">
+      <h1>Tellevo</h1>
+      <h2>APP</h2>
+    </div>
+    <div class="container">
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Buscar viaje</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button (click)="buscar()" expand="block">Buscar Viaje</ion-button>
+          Para Ver tus viaje haz clic en "Buscar Viaje".
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Mis viajes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button (click)="listaviaje()"expand="block">Lista de Viajes</ion-button>
+          Para ver tus viajes programados haz clic en "Lista de Viajes".
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Cancelar viaje</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button (click)="cancelarviaje()" expand="block">Cancelar Viaje</ion-button>
+          Para cancelar tu viaje haz clic en "Cancelar Viaje".
+        </ion-card-content>
+      </ion-card>   
+    </div>
+  </ion-content>
+</ion-app>

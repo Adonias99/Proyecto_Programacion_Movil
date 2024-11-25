@@ -1,0 +1,164 @@
+ion-list {
+  margin-top: 15px;
+}
+
+ion-item {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Apila los elementos en columna */
+  justify-content: space-between; /* Espacio entre los elementos */
+  position: relative; /* Necesario para posicionar elementos hijos relativos */
+  height: 100%; /* Asegura que el item ocupe todo el alto */
+}
+
+.hora-container {
+  margin-top: -10px;
+  position: absolute; /* Cambiar a absolute para posicionar en la esquina */
+  top: 15px; /* Distancia desde la parte superior del item */
+  right: 15px; /* Distancia desde la derecha */
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  color: rgb(226, 216, 72); /* Color del texto */
+  padding: 8px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  background-color: rgba(181, 181, 181, 0.7); /* Fondo blanco semi-transparente */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.hora {
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  color: #ffffff; /* Cambia el color del texto si es necesario */
+}
+
+.titulo-destino {
+  font-size: 24px; /* Ajusta el tamaño según tus preferencias */
+  font-weight: 200; /* Para hacer el texto en negrita */
+  color: #fff; /* Cambia el color si es necesario */
+  margin-bottom: 8px; /* Espaciado debajo del título */
+}
+
+.aceptar-viaje {
+  color: #ffffff;
+  margin-top: 20px;
+  height: 40px;
+  width: 96px;
+}
+
+ion-toolbar {
+  --background: #083d85; 
+  --color: #fff; 
+  }
+ion-toolbar ion-buttons{
+  width: 7px;
+}
+ion-title {
+  text-align: center;
+  flex-direction: column; // Alinea los elementos en columna
+  justify-content: center;
+}
+
+ion-list {
+  --background-color: #4e74a7; 
+}
+
+ion-content {
+  --background: #083d85; 
+  --color: #ffffff; 
+}
+
+ion-item {
+  --background: #4e74a7; 
+  --color: #ffffff; 
+}
+
+ion-item ion-label {
+  color: #ffffff; 
+}
+
+ion-item ion-label h2,
+ion-item ion-label p {
+  color: #ffffff; 
+}
+
+.avatar-circle {
+  width: 50px; /* Ajusta el tamaño según necesites */
+  height: 50px; /* Mantén el mismo ancho y alto para asegurar el círculo */
+  border-radius: 50%; /* Esto crea el borde circular */
+  border: 2px solid #fff; /* Borde alrededor del avatar (puedes cambiar el color y grosor) */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra el texto dentro del círculo */
+
+  p {
+    margin: 0; /* Elimina el margen por defecto del <p> */
+    color: #edb232; /* Color del texto (puedes cambiarlo si lo deseas) */
+    font-weight: bold; /* Estilo en negrita para el texto */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+  }
+}
+.titulo{
+  margin-top: 10%;
+}
+.titulo h1{
+  color: #edb232;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+.titulo h2{
+  color: aliceblue;
+
+  font-weight: 700; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+
+ion-list{
+  background-color: #4e74a7;
+  margin-top: 6%
+}
+.aceptarviaje ion-button{
+  width: 50px;
+}
+
+#detalle {
+  width: 300px; 
+  height: 40px;
+  display: flex;                     /* Activa el modo flex */
+  justify-content: center;           /* Centra horizontalmente el contenido */
+  align-items: center;               /* Centra verticalmente el contenido */
+  margin: 0 auto;                   /* Centra el botón en su contenedor */
+}
+ion-searchbar{
+  margin-top: 15%;
+}
+
+ion-item {
+  position: relative; /* Necesario para posicionar el hijo relativo */
+}
+
+.hora-container {
+  text-align: center;
+  color: rgb(226, 216, 72);      /* Color del texto blanco para contraste */
+  padding: 8px;     /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  z-index: 10;      /* Asegura que esté por encima de otros elementos */
+}
+.titulo-destino {
+  font-size: 24px; /* Ajusta el tamaño según tus preferencias */
+  font-weight: bold; /* Para hacer el texto en negrita */
+  color: #fff; /* Cambia el color si es necesario */
+  margin-bottom: 8px; /* Espaciado debajo del título */
+}
+

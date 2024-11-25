@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escanear QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="startScan()">Iniciar Escaneo</ion-button>
+  
+  <div *ngIf="scanResult" class="result-container">
+    <h2>Resultado:</h2>
+    <p>{{ scanResult }}</p>
+  </div>
+</ion-content>
+
+<style>
+  .result-container {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+</style>

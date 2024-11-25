@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ruta del Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Centrado del texto del destino -->
+  <h1 style="text-align: center;">{{ destino }}</h1>
+  
+  <div id="mapa" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+
+  <!-- Ion Card para mostrar información sobre el viaje -->
+  <ion-card *ngIf="viajeIniciado" style="margin-top: 20px;">
+    <ion-card-header>
+      <ion-card-title>Detalles del Viaje</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="!distancia || !duracion">
+        <!-- Mostrar el spinner mientras los datos no están disponibles -->
+        <ion-spinner name="crescent"></ion-spinner>
+        <p>Cargando información del viaje...</p>
+      </div>
+
+      <div *ngIf="distancia && duracion">
+        <!-- Mostrar los detalles del viaje -->
+        <p><strong>Distancia:</strong> {{distancia}} km</p>
+        <p><strong>Duración estimada:</strong> {{duracion}} minutos</p>
+      </div>
+
+      <div *ngIf="error">
+        <!-- Mostrar un mensaje de error si algo salió mal al obtener la ruta -->
+        <ion-text color="danger">
+          <p>Error al obtener la información del viaje. Por favor, intenta nuevamente.</p>
+        </ion-text>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="botones" style="margin-top: 20px; text-align: center;">
+    <ion-button 
+      *ngIf="!viajeIniciado" 
+      color="primary" 
+      (click)="toggleViaje()">
+      Iniciar Viaje
+    </ion-button>
+
+    <ion-button 
+      *ngIf="viajeIniciado" 
+      color="danger" 
+      (click)="toggleViaje()">
+      Finalizar Viaje
+    </ion-button>
+  </div>
+</ion-content>

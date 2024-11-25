@@ -1,0 +1,165 @@
+.menu {
+  ion-title {
+    color: #ffffff; // Color del título del menú
+  }
+  
+  ion-list {
+    background-color: #4e74a7; // Color de fondo que coincide con tu diseño
+    margin: 0; // Elimina el margen
+    padding: 0; // Elimina el padding
+    border-radius: 8px; // Bordes redondeados
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra para efecto de profundidad
+  }
+
+  ion-item{
+    background-color: #083d85;
+  }
+
+  .leer-qr-item {
+    background-color: transparent; // Fondo transparente para que coincida con el color de la lista
+    color: #ffffff; // Color del texto
+
+    // Efectos al pasar el mouse
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2); // Fondo más claro al pasar el mouse
+    }
+
+    // Alineación y estilo del texto
+    ion-label {
+      font-size: 16px; // Tamaño del texto
+      text-align: center; // Centra el texto
+    }
+  }
+
+  // Estilo del botón existente
+  ion-button {
+    background: #edb232; 
+    color: white; 
+    margin-top: 160%; // Mantiene el botón donde estaba
+  }
+}
+
+.menu ion-item{
+  background-color: #4e74a7;
+}
+.titulo2 {
+  margin-top: 16%;
+  margin-bottom: 9%;
+ }
+.titulo2 h1{
+
+  color: #edb232;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}
+.titulo2 h2{
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900; 
+  font-size: 45px; 
+  text-align: center;
+  
+  display: flex;
+  justify-content: center; // Centra horizontalmente
+  align-items: center;     // Centra verticalmente
+  height: 20px
+}   
+.titulo {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+.titulo ion-text {
+  color: #edb232;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+  margin-left: 6px;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+#container a {
+  text-decoration: none;
+}
+ion-button {
+  --background: #edb232; 
+  --color: white; 
+}
+
+
+ion-content {
+  --background: #083d85; 
+}
+
+.container p {
+  color: white;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+ion-title {
+  background-color: #4e74a7;
+  height: 55px;
+  border-color: #4e74a7;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+ion-menu-button {
+  background-color: #4e74a7;
+  height: 55px;
+  width: 80px;
+  color: aliceblue;
+}
+
+.menu {
+  background-color: #083d85; 
+}
+
+.menu ion-title {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+
+
+ion-card {
+  background-color: #4e74a7;
+}
+
+ion-card-title {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}
+
+ion-card-content {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
+}

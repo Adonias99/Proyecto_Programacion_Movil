@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="text-align: center;">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="titulo">
+    <h1>Tellevo</h1>
+    <h2>APP</h2>
+  </div>
+  <div class="formulario">
+    <ion-item class="usuario-item">
+      <ion-input [(ngModel)]="usuario" label="Correo Electrónico" 
+                 label-placement="floating" 
+                 fill="outline" 
+                 placeholder="Ingrese Correo Electrónico"></ion-input>
+    </ion-item>
+    <ion-item class="contrasena-item">
+      <ion-input [(ngModel)]="contrasena" label="Contraseña" 
+                 label-placement="floating" 
+                 fill="outline" 
+                 type="password"
+                 placeholder="Ingrese contraseña"></ion-input>
+    </ion-item>
+    <ion-item class="conductorPasajero">
+      <ion-select [(ngModel)]="rol" label="Elige ingresar como" placeholder="Conductor o Pasajero">
+        <ion-select-option value="conductor">Conductor</ion-select-option>
+        <ion-select-option value="pasajero">Pasajero</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="validar()">Ingresar</ion-button>
+    </ion-item>
+    <ion-item>
+      <p class="restablecer-text">Para reestablecer tu contraseña presiona <span class="enlace" (click)="restablecer()">aquí</span>.</p>
+    </ion-item>
+  </div>
+</ion-content>
